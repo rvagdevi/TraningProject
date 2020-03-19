@@ -1,0 +1,19 @@
+<div><img class="mx-auto d-block" src="assets\images\BookstoreAdminLogo.png" width="50%" align="middle"></div>
+<h5 style="text-align: center">Welcome, {{admin.email}}&nbsp;&nbsp;<a routerLink=""><u>Logout</u></a></h5>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/adminlist"><u><b>Users</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/categorylist"><u><b>Categories</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a [routerLink]="['/booklist',admin.id]"><u><b>Books</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/customerlist"><u><b>Customers</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/reviewlist"><u><b>Reviews</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a><u><b>Orders</b></u></a>
+</div>
+<h5 style="text-align: center">Administrative Dashboard</h5>
+<hr style="display: block;height:1px;border-top:1px solid #ccc">
+<h5 style="text-align:center">Quick Actions:</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="/addbook"><u><b>New Book</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="/addadmin"><u><b>New User</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="/addcategory"><u><b>New Category</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="/createcustomer"><u><b>New Customer</b></u></a>
+<footer><h6 align="center">&copy;Copyright(C) 2017 by Evergreen Books Co.Ltd </h6></footer>
