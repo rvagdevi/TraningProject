@@ -1,0 +1,33 @@
+<div><img class="mx-auto d-block" src="assets\images\BookstoreAdminLogo.png" width="50%" align="middle"></div>
+<!--<h5 style="text-align: center">Welcome, {{adminData.email}}&nbsp;&nbsp;<a routerLink=""><u>Logout</u></a></h5>-->
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="['adminlist',adminData.id]"><u><b>Users</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a><u><b>Categories</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a><u><b>Books</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a><u><b>Customers</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a><u><b>Reviews</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a><u><b>Orders</b></u></a>
+</div>
+<div class="container" style="text-align:center">
+        <h1>Edit User</h1>
+    <form #custForm="ngForm" (ngSubmit)="edit()">
+        <table style="width:50%;margin-left: auto;margin-right: auto">
+        <tr>
+            <td><label class="control-label"> E-mail:&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+            <td><input type="email" name="email" class="form-control" [(ngModel)]="adminData.email"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label">Full Name:</label></td>
+            <td><input type="text" name="fullname" class="form-control" [(ngModel)]="adminData.fullname"/></td>
+        </tr>
+        <tr>
+            <td><label class="control-label">Password:</label></td>
+            <td><input type="password" name="password" class="form-control" [(ngModel)]="adminData.password"></td>
+        </tr>
+    </table>
+        <button class="btn btn-primary" type="submit">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="reset" class="btn btn-primary pull-right" (click)="cancel()">Cancel</button>
+    </form>
+</div>
+<footer><h6 align="center">&copy;Copyright(C) 2017 by Evergreen Books Co.Ltd </h6></footer>

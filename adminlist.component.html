@@ -1,0 +1,43 @@
+<div><img class="mx-auto d-block" src="assets\images\BookstoreAdminLogo.png" width="50%" align="middle"></div>
+<!--<h5 style="text-align: center">Welcome, {{admin.email}}&nbsp;&nbsp;<a routerLink=""><u>Logout</u></a></h5>-->
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a><u><b>Users</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/categorylist"><u><b>Categories</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/booklist"><u><b>Books</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/customerlist"><u><b>Customers</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/reviewlist"><u><b>Reviews</b></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/myorders"><u><b>Orders</b></u></a>
+</div>
+<div class="container" style="text-align:center">
+    <h1>Users Management</h1>
+    <a routerLink="/addadmin"><u><b>Create new User</b></u></a>
+    <table class="table table-bordered" border="1">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Full Name</th>
+                <th>Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let admin of admins, let i=index">
+                <!-- <td>{{product.id}}</td> -->
+                <td>{{i+1}}</td>
+                <td>{{admin.id}}</td>
+                <td>{{admin.email}}</td>
+                <td>{{admin.fullname}}</td>
+                <!-- <td>{{product.category}}</td> -->
+                <td>
+                    <u routerLinkActive [routerLink]="['edit',admin.id]">Edit</u>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <u (click)='deleteAdmin(admin)'>Delete</u>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<footer><h6 align="center">&copy;Copyright(C) 2017 by Evergreen Books Co.Ltd </h6></footer>
